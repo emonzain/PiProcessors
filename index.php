@@ -1,7 +1,7 @@
 <?php
 
 require_once 'lib/limonade.php';
-require_once 'src/piprocess.php')
+require_once 'src/piprocess.php';
 
 
 function configure()
@@ -25,7 +25,7 @@ dispatch('/process/:name/:action', 'actionprocess')
 		
 		$json_object = array('item' => $process ,'action' => "$do_action", 'result' => $do_action);
 		
-		return json($process)
+		return json($process);
 	}
 
 run();
