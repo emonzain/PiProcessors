@@ -16,17 +16,18 @@ class PiProcess {
 		switch($action)
 		{
 			case "on" : 
-				exec("sed 'Starting process : ".$this->ProcessName." ... Result : OK !' /var/www/html/webcontrol-limo/actions_loging.txt");
+				exec("sudo echo -e \"Starting process : ".$this->ProcessName." ... Result : OK !\" >> /var/www/html/webcontrol-limo/actions_loging.txt");
 				$result = true;
 				break;
 				
 			case "off" : 
-				exec("sed 'Stopping process : ".$this->ProcessName." ... Result : OK !' /var/www/html/webcontrol-limo/actions_loging.txt");
+				exec("sudo echo -e \"Stopping process : ".$this->ProcessName." ... Result : OK !\" >> /var/www/html/webcontrol-limo/actions_loging.txt");
 				$result = true;
 				break;
 			
 			default: 
-				exec("sed 'Wrong action : ".$this->ProcessName." ... Result : Error' /var/www/html/webcontrol-limo/actions_loging.txt");
+				exec("sudo echo -e \"Wrong action : ".$this->ProcessName." ... Result : Error\" >> /var/www/html/webcontrol-limo/actions_loging.txt");
+				$result = false;
 				break;
 		}
 		
