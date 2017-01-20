@@ -14,3 +14,5 @@ function hello-limo()
 {
   return html('index.html.php');
 }
+
+run();
