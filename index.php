@@ -22,10 +22,11 @@ dispatch('/process/:name/:action', 'actionprocess');
 		$do_action = params('action');
 		
 		$process = new PiProcess($proc_name);
+		$result = $process->do_action($do_action);
 		
-		$json_object = array('item' => $process ,'action' => "$do_action", 'result' => $do_action);
+		$json_object = array('item' => $process ,'action' => "$do_action", 'result' => $result);
 		
-		return json($process);
+		return json($json_object);
 	}
 
 run();
