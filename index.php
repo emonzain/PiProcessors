@@ -15,7 +15,7 @@ dispatch('/', 'hellolimo');
 	  return html('index.html.php');
 	}
 	
-dispatch('/process/:name/:action', 'actionprocess')
+dispatch('/process/:name/:action', 'actionprocess');
 	function actionprocess()
 	{		
 		$proc_name = params('name');
