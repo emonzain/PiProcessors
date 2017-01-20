@@ -8,9 +8,9 @@ function configure()
   option('pages_dir', file_path(option('root_dir'), 'pages'));
 }
 
-dispatch('/', 'hello-limo');
+dispatch('/', 'hellolimo');
 
-function hello-limo()
+function hellolimo()
 {
   return html('index.html.php');
 }
