@@ -3,6 +3,7 @@
 require_once 'lib/limonade.php';
 require_once 'src/piprocess.php';
 
+$GLOBALS["filename"] = __DIR__;
 
 function configure()
 {
