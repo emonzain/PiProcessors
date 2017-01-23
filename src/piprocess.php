@@ -1,6 +1,6 @@
 <?php 
 
-require("apiresult.inc");
+require("apiresult.php");
 
 class PiProcess { 
     public $ProcessName = ''; 
@@ -19,17 +19,17 @@ class PiProcess {
 		switch($action)
 		{
 			case "on" : 
-				$details = exec("sudo echo \"Starting process : ".$this->ProcessName." ... Result : OK\" | sudo tee -a /var/www/html/webcontrol-limo/actions_loging.txt");
+				$details = exec("echo \"Starting process : ".$this->ProcessName." ... Result : OK\" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt");
 				$result = true;
 				break;
 				
 			case "off" : 
-				$details = exec("sudo echo \"Stopping process : ".$this->ProcessName." ... Result : OK\" | sudo tee -a /var/www/html/webcontrol-limo/actions_loging.txt");
+				$details = exec("echo \"Stopping process : ".$this->ProcessName." ... Result : OK\" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt");
 				$result = true;
 				break;
 			
 			default: 
-				$details = exec("sudo echo \"Wrong action : ".$this->ProcessName." ... Result : Error\" | sudo tee -a /var/www/html/webcontrol-limo/actions_loging.txt");
+				$details = exec("echo \"Wrong action : ".$this->ProcessName." ... Result : Error\" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt");
 				$result = false;
 				break;
 		}
