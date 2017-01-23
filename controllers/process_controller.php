@@ -1,6 +1,6 @@
 <?php
 
-require_once("../src/piprocess.php");
+require("../src/piprocess.php");
 
 class ProcessController
 {
