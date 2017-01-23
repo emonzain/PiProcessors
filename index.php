@@ -30,4 +30,8 @@ dispatch('/process/:name/:action', 'actionprocess');
 		return json($json_object);
 	}
 
+	
+dispatch('/process/list', 'ProcessController::ListOfProcess');
+
+
 run();
