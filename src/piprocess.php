@@ -14,7 +14,7 @@ class PiProcess {
 	
 	function do_action($action)
 	{
-		global $appDir;
+		$appDir = option()['root_dir'];
 		$shellDirScript = $appDir."/shell-scripts/piprocessors-action.sh";
 		
 		$result = false;
