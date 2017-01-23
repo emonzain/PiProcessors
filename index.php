@@ -2,6 +2,7 @@
 
 require_once 'lib/limonade.php';
 require_once 'src/piprocess.php';
+require_once 'controllers/process_controller.php';
 
 $GLOBALS["filename"] = __DIR__;
 
