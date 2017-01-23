@@ -14,22 +14,26 @@ class PiProcess {
 	
 	function do_action($action)
 	{
+		$shellDirScript = __DIR__."/shell-scripts/piprocessors-action.sh";
+		
 		$result = false;
 		$details = "";
 		switch($action)
 		{
 			case "on" : 
-				$details = exec("echo \"Starting process : ".$this->ProcessName." ... Result : OK\" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt");
+				$details .= exec("echo \"Starting process : ".$this->ProcessName." ... Result : OK\" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt");
+				$details .= exec($shellDirScript." ".$this->ProcessName." start");
 				$result = true;
 				break;
 				
 			case "off" : 
-				$details = exec("echo \"Stopping process : ".$this->ProcessName." ... Result : OK\" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt");
+				$details .= exec("echo \"Stopping process : ".$this->ProcessName." ... Result : OK\" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt");
+				$details .= exec($shellDirScript." ".$this->ProcessName." stop");
 				$result = true;
 				break;
 			
 			default: 
-				$details = exec("echo \"Wrong action : ".$this->ProcessName." ... Result : Error\" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt");
+				$details .= exec("echo \"Wrong action : ".$this->ProcessName." ... Result : Error\" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt");
 				$result = false;
 				break;
 		}
