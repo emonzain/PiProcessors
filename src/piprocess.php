@@ -22,12 +22,14 @@ class PiProcess {
 		{
 			case "on" : 
 				$details .= exec("echo \"Starting process : ".$this->ProcessName." ... Result : OK\" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt");
+				$details .= $shellDirScript." ".$this->ProcessName." start";
 				$details .= exec($shellDirScript." ".$this->ProcessName." start");
 				$result = true;
 				break;
 				
 			case "off" : 
 				$details .= exec("echo \"Stopping process : ".$this->ProcessName." ... Result : OK\" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt");
+				$details .= $shellDirScript." ".$this->ProcessName." stop";
 				$details .= exec($shellDirScript." ".$this->ProcessName." stop");
 				$result = true;
 				break;
