@@ -1,5 +1,7 @@
 <?php 
 
+require("apiresult.inc");
+
 class PiProcess { 
     public $ProcessName = ''; 
     public $ProcessStatus = ''; 
