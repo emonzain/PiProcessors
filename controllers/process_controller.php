@@ -29,4 +29,21 @@ class ProcessController
 			
 		return json($processList);
 	}
+	
+	
+	static public function ListOfServices()
+	{
+		$ps = explode("\n", trim(shell_exec('service --status-all')));
+		$it = 0;
+		
+		$processList = array();
+		foreach($ps AS $process)
+		{
+			$it++;
+			
+			array_push($processList, $process);
+		}
+			
+		return json($processList);
+	}
 }
