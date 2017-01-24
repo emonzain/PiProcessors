@@ -8,7 +8,7 @@ class PhpLogsReader
     
     
 		$data = explode("\n", file_get_contents('/var/www/html/webcontrol-limo/PiProcessors/php5-fpm.log'));
-		foreach($data AS $line)
+		foreach(array_reverse($data) AS $line)
 		{
 			$html = $html.$line."<br />";
 		}   
