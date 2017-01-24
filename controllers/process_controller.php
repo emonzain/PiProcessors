@@ -13,7 +13,7 @@ class ProcessController
 		foreach($ps AS $process)
 		{
 			$it++;
-			$processes[]=preg_split('@\s+@', trim($process), 7 );
+			$processes=preg_split('@\s+@', trim($process), 7 );
 			
 			//$newProcess = new PiProcess($processes[0]);
 			//$newProcess->ProcessPID = $processes[1];
