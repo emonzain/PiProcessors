@@ -20,6 +20,13 @@ class PiProcess {
 		$this->ProcessName = $name;
 	}
 	
+	function get_infos()
+	{
+		$details = shell_exec("service kodi status");
+		return $details;
+	}
+	
+	
 	function do_action($action)
 	{
 		$appDir = option()['root_dir'];
