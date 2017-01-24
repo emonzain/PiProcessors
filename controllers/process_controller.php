@@ -15,15 +15,15 @@ class ProcessController
 			$it++;
 			$processes[]=preg_split('@\s+@', trim($process), 7 );
 			
-			$newProcess = new PiProcess($processes[0]);
-			$newProcess->ProcessPID = $processes[1];
-			$newProcess->ProcessPPID = $processes[2];
-			$newProcess->ProcessStatus = $processes[3];
-			$newProcess->ProcessCPU = $processes[3];
-			$newProcess->ProcessMem = $processes[4];			
-			$newProcess->ProcessUser = $processes[5];			
-			$newProcess->ProcessUserGroup = $processes[6];			
-			$newProcess->ProcessArgs = $processes[7];
+			//$newProcess = new PiProcess($processes[0]);
+			//$newProcess->ProcessPID = $processes[1];
+			//$newProcess->ProcessPPID = $processes[2];
+			//$newProcess->ProcessStatus = $processes[3];
+			//$newProcess->ProcessCPU = $processes[3];
+			//$newProcess->ProcessMem = $processes[4];			
+			//$newProcess->ProcessUser = $processes[5];			
+			//$newProcess->ProcessUserGroup = $processes[6];			
+			//$newProcess->ProcessArgs = $processes[7];
 			
 			$processList = array_push($processList, $process);
 		}
