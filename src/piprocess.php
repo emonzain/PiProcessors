@@ -22,7 +22,7 @@ class PiProcess {
 	
 	function get_infos()
 	{
-		$details = shell_exec("service kodi status");
+		$details = shell_exec("service ".$this->ProcessName." status");
 		return $details;
 	}
 	
