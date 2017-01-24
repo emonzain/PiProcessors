@@ -7,7 +7,7 @@ class DebugViewController
     
     
 		$data = explode("\n", file_get_contents('/var/www/html/webcontrol-limo/actions_loging.txt'));
-		foreach($data AS $line)
+		foreach(array_reverse($data) AS $line)
 		{
 			$html = $html.$line."<br />";
 		}   
