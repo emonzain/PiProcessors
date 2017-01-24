@@ -3,6 +3,7 @@
 require_once 'lib/limonade.php';
 require_once 'src/piprocess.php';
 require_once 'controllers/process_controller.php';
+require_once 'controllers/debugview_controller.php';
 
 ini_set('display_errors', 'On');
 error_reporting(E_ALL | E_STRICT);
@@ -36,6 +37,8 @@ dispatch('/process/:name/:action', 'actionprocess');
 dispatch('/process-list', 'ProcessController::ListOfProcess');
 	
 dispatch('/phplogs', 'PhpLogsReader::ShowPhpLogs');
+	
+dispatch('/debugview', 'DebugViewController::ShowActionLogs');
 
 
 run();
