@@ -8,7 +8,7 @@ class ProcessController
 	{
 		$ps = explode("\n", trim(shell_exec('ps axo pid,ppid,%cpu,pmem,user,group,args --sort %cpu')));
 		$it = 0;
-
+		return json($ps);
 		$processList = array();
 		foreach($ps AS $process)
 		{
