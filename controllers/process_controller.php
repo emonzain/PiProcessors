@@ -25,7 +25,7 @@ class ProcessController
 			//$newProcess->ProcessUserGroup = $processes[6];			
 			//$newProcess->ProcessArgs = $processes[7];
 			
-			array_push($processList, $processes);
+			array_push($processList, $process);
 		}
 			
 		return json($processList);
