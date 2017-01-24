@@ -32,6 +32,19 @@ dispatch('/process/:name/:action', 'actionprocess');
 		
 		return json($json_object);
 	}
+	
+dispatch('/service/:name', 'service_infos');
+	function service_infos()
+	{		
+		$proc_name = params('name');
+		
+		$process = new PiProcess($proc_name);
+		$result = $process->get_infos();
+		
+		$json_object = array('item' => $process ,'action' => "$do_action", 'result' => $result);
+		
+		return json($json_object);
+	}
 
 	
 dispatch('/process-list', 'ProcessController::ListOfProcess');
