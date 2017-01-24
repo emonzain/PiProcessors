@@ -3,13 +3,7 @@ class PhpLogsReader
 {
   static public function ShowPhpLogs()
   {
-    $logs = explode("\n", trim(shell_exec('cat /var/log/php5-fpm.log')));
-    
-    $html = "";
-		foreach($logs AS $line)
-		{
-      $html = $html.$line."</br>";
-    }
+    $html = file_get_contents('/var/log/httpd/php5-fpm.log');
     
     return $html;
   }
