@@ -33,6 +33,8 @@ dispatch('/process/:name/:action', 'actionprocess');
 
 	
 dispatch('/process-list', 'ProcessController::ListOfProcess');
+	
+dispatch('/phplogs', 'PhpLogsReader::ShowPhpLogs');
 
 
 run();
