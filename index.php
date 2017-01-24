@@ -4,7 +4,8 @@ require_once 'lib/limonade.php';
 require_once 'src/piprocess.php';
 require_once 'controllers/process_controller.php';
 
-$GLOBALS["filename"] = __DIR__;
+ini_set('display_errors', 'On');
+error_reporting(E_ALL | E_STRICT);
 
 function configure()
 {
