@@ -35,6 +35,7 @@ dispatch('/process/:name/:action', 'actionprocess');
 
 	
 dispatch('/process-list', 'ProcessController::ListOfProcess');
+dispatch('/service-list', 'ProcessController::ListOfServices');
 	
 dispatch('/phplogs', 'PhpLogsReader::ShowPhpLogs');
 	
