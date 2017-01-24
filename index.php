@@ -32,7 +32,7 @@ dispatch('/process/:name/:action', 'actionprocess');
 	}
 
 	
-dispatch('/process/list', 'ProcessController::ListOfProcess');
+dispatch('/process-list', 'ProcessController::ListOfProcess');
 
 
 run();
