@@ -1,5 +1,5 @@
 <?php
-class PhpLogsReadeer
+class PhpLogsReader
 {
   static public function ShowPhpLogs()
   {
