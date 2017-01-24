@@ -22,8 +22,7 @@ class ProcessController
 			$newProcess->ProcessCPU = $processes[3];
 			$newProcess->ProcessMem = $processes[4];			
 			$newProcess->ProcessUser = $processes[5];			
-			$newProcess->ProcessUserGroup = $processes[6];			
-			$newProcess->ProcessArgs = $processes[7];
+			$newProcess->ProcessUserGroup = $processes[6];		
 			
 			array_push($processList, $processes);
 		}
