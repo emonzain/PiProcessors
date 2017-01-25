@@ -31,7 +31,7 @@ dispatch('/', 'hellolimo');
 dispatch('/accueil', 'accueil');
 	function accueil()
 	{
-		$processes = array("data" => "tadada");//ProcessController::ListOfServices();
+		$processes = ProcessController::ListOfServices();
 	  	return render('accueil.html.php', layout(), layoutViewBag("Mes services :)", $processes));
 	}
 	
@@ -63,7 +63,7 @@ dispatch('/service/:name', 'service_infos');
 
 	
 dispatch('/process-list', 'ProcessController::ListOfProcess');
-dispatch('/service-list', 'ProcessController::ListOfServices');
+dispatch('/service-list', 'ProcessController::ListOfServicesJson');
 	
 dispatch('/phplogs', 'PhpLogsReader::ShowPhpLogs');
 	
