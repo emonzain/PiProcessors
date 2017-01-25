@@ -32,7 +32,7 @@ dispatch('/accueil', 'accueil');
 	function accueil()
 	{
 		$processes = array("data" => "tadada");//ProcessController::ListOfServices();
-	  	return render('accueil.html.php', null, layoutViewBag("Mes services :)", $processes));
+	  	return render('accueil.html.php', layout(), layoutViewBag("Mes services :)", $processes));
 	}
 	
 dispatch('/process/:name/:action', 'actionprocess');
