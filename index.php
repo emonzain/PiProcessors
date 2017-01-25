@@ -16,6 +16,12 @@ function configure()
   	option('pages_dir', file_path(option('root_dir'), 'pages'));
 }
 
+dispatch('/mylayout', 'mylayout');
+	function mylayout()
+	{
+	  return json(array("layout" => layout()));
+	}
+
 dispatch('/', 'hellolimo');
 	function hellolimo()
 	{
