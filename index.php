@@ -2,6 +2,7 @@
 
 require_once 'lib/limonade.php';
 require_once 'src/piprocess.php';
+require_once 'src/piservice.php';
 require_once 'controllers/process_controller.php';
 require_once 'controllers/debugview_controller.php';
 
@@ -38,10 +39,9 @@ dispatch('/service/:name', 'service_infos');
 	{		
 		$proc_name = params('name');
 		
-		$process = new PiProcess($proc_name);
-		$result = $process->get_infos();
+		$service = new PiService($proc_name);
 		
-		$json_object = array('item' => $process ,'action' => 'info', 'result' => $result);
+		$json_object = array('item' => $process ,'action' => 'info', 'result' => $service);
 		
 		return json($json_object);
 	}
