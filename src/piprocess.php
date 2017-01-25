@@ -1,6 +1,6 @@
 <?php 
 
-require("apiresult.php");
+require_once("apiresult.php");
 
 class PiProcess { 
 
