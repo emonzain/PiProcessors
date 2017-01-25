@@ -44,6 +44,12 @@ class ProcessController
 			array_push($processList, $process);
 		}
 			
-		return json($processList);
+		return $processList;
+	}
+	
+	
+	static public function ListOfServicesJson()
+	{
+		return json(ProcessController::ListOfServices());
 	}
 }
