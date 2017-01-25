@@ -12,7 +12,7 @@ error_reporting(E_ALL | E_STRICT);
 
 function configure()
 {
-	layout('views/_default_layout.php');
+	layout('_default_layout.php');
   	option('pages_dir', file_path(option('root_dir'), 'pages'));
 }
 
