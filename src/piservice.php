@@ -24,9 +24,9 @@ class PiService
       //$this->IsActive = substr(substr(trim($data[2]), strlen("Active:")), 0, strlen("active")) === "active";
       //$this->IsRunning = !strpos($data[2], "(running)") > 0;
 	    
-      $this->IsLoaded = trim($data[1]);
-      $this->IsActive = $data[2];
-      $this->IsRunning = $data[2];
+      $this->IsLoaded = substr(trim($data[1]), strlen("Loaded:")-1);
+      $this->IsActive = substr(substr(trim($data[2]), strlen("Active:")-1);
+      $this->IsRunning = !strpos($data[1], "(running)") > 0;;
     }
 	
     function get_infos()
