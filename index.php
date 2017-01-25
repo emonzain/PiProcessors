@@ -1,6 +1,7 @@
 <?php
 
 require_once 'lib/limonade.php';
+require_once 'lib/limonade_extends.php';
 require_once 'src/piprocess.php';
 require_once 'src/piservice.php';
 require_once 'controllers/process_controller.php';
@@ -11,13 +12,21 @@ error_reporting(E_ALL | E_STRICT);
 
 function configure()
 {
-  option('pages_dir', file_path(option('root_dir'), 'pages'));
+	layout('views/_default_layout.php');
+  	option('pages_dir', file_path(option('root_dir'), 'pages'));
 }
 
 dispatch('/', 'hellolimo');
 	function hellolimo()
 	{
 	  return html('index.html.php');
+	}
+
+dispatch('/accueil', 'accueil');
+	function accueil()
+	{
+		$processes = ProcessController::ListOfServices();
+	  	return render('accueil.html.php', layoutViewBag($processes));
 	}
 	
 dispatch('/process/:name/:action', 'actionprocess');
