@@ -19,7 +19,7 @@ function configure()
 dispatch('/mylayout', 'mylayout');
 	function mylayout()
 	{
-	  return json(array("layout" => layout()));
+	  return json(layoutViewBag("Mes services :)", $processes));
 	}
 
 dispatch('/', 'hellolimo');
