@@ -41,7 +41,7 @@ dispatch('/service/:name', 'service_infos');
 		
 		$service = new PiService($proc_name);
 		
-		$json_object = array('item' => $process ,'action' => 'info', 'result' => $service);
+		$json_object = array('item' => $service ,'action' => 'info', 'result' => $service != null );
 		
 		return json($json_object);
 	}
