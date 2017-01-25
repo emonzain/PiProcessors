@@ -1,10 +1,5 @@
 
-<div>
-  <h1>Services</h1>
-</div>
-<p>
-  Hello Services :)
-</p>
+
 <table>    
     <tr>
         <td>ServiceName</td>
@@ -13,7 +8,7 @@
         <td>IsActive</td>
         <td>IsRunning</td>
     </tr>
-<?php foreach($Services as $Service): ?>
+<?php foreach($Model as $Service): ?>
     <tr>
         <td><?php echo $Service->ServiceName; ?></td>
         <td><?php echo $Service->ServiceDesc; ?></td>
