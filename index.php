@@ -26,7 +26,7 @@ dispatch('/accueil', 'accueil');
 	function accueil()
 	{
 		$processes = ProcessController::ListOfServices();
-	  	return render('accueil.html.php', layoutViewBag("Mes services :)", $processes));
+	  	return render('accueil.html.php', layout(), layoutViewBag("Mes services :)", $processes));
 	}
 	
 dispatch('/process/:name/:action', 'actionprocess');
