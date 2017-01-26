@@ -42,17 +42,13 @@ class ProcessController
 			$it++;
 			
 			$data = preg_replace('!\s+!', ' ', $process);
-			echo "$data".json_encode($data)."<br />";
             preg_match_all('/\S+/', $data, $serviceData);
-			echo "$data".json_encode($serviceData)."<br />";
 			list($brack1, $status, $brack2, $serviceName) =  $serviceData[0];
 			
-			echo $serviceName."<br />";
 			
 			if(option("filter") == null)
 				option("filter", array("kodi", "php5-fpm"));
 			
-			echo json_encode(option("filter"));
 			
 			if(!$filter || in_array($serviceName, option("filter")))
 			{	
