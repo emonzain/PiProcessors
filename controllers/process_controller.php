@@ -42,12 +42,11 @@ class ProcessController
 			$it++;
 			list($brack1, $status, $brack2, $serviceName) =  $process;
 			
-			echo $process;
 			
 			if(option("filter") == null)
 				option("filter", array("kodi", "php5-fpm"));
 			
-			if(!$filter || in_array($process, option("filter")))
+			if(!$filter || in_array($serviceName, option("filter")))
 			{	
 				array_push($processList, new PiService($serviceName));
 			}
