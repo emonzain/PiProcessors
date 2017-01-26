@@ -42,6 +42,8 @@ class ProcessController
 			$it++;
 			list($brack1, $status, $brack2, $serviceName) =  $process;
 			
+			echo $process;
+			
 			if(option("filter") == null)
 				option("filter", array("kodi", "php5-fpm"));
 			
