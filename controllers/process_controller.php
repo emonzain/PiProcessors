@@ -47,7 +47,7 @@ class ProcessController
 			
 			if(!$filter || in_array($process, option("filter")))
 			{	
-				array_push($processList, new PiService($serviceName);
+				array_push($processList, new PiService($serviceName));
 			}
 		}
 			
