@@ -31,7 +31,7 @@ class ProcessController
 	}
 	
 	
-	static public function ListOfServices()
+	static public function ListOfServices($filter = true)
 	{
 		$ps = explode("\n", trim(shell_exec('service --status-all')));
 		$it = 0;
@@ -40,8 +40,15 @@ class ProcessController
 		foreach($ps AS $process)
 		{
 			$it++;
+			list($brack1, $status, $brack2, $serviceName) =  $process;
 			
-			array_push($processList, $process);
+			if(options("filter") == null)
+				options("filter", array("kodi", "php5-fpm"));
+			
+			if(!$filter || in_array($process, option("filter")))
+			{	
+				array_push($processList, new PiService($serviceName);
+			}
 		}
 			
 		return $processList;
