@@ -52,11 +52,11 @@ class ProcessController
 			
 			if(!$filter || in_array($serviceName, option("filter")))
 			{	
-				echo "=>2".$serviceName."<br />";
 				array_push($processList, new PiService($serviceName));
 			}
 		}
 			
+		echo "=>2".json_encode($processList)."<br />";
 		return $processList;
 	}
 	
