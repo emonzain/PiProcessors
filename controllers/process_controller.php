@@ -55,8 +55,7 @@ class ProcessController
 				array_push($processList, new PiService($serviceName));
 			}
 		}
-			
-		echo "=>2".json_encode($processList)."<br />";
+		
 		return $processList;
 	}
 	

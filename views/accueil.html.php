@@ -1,15 +1,6 @@
 
 
 <table>    
-<?php foreach($Model as $Service): ?>
-    <tr>
-        <td><?php echo json_encode($Service) ?></td>
-        <td><?php echo $Service ?></td>
-    </tr>
-<?php endforeach; ?>
-</table>
-
-<table>    
     <tr>
         <td>ServiceName</td>
         <td>ServiceDesc</td>
