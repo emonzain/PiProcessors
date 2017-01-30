@@ -1,1 +1,10 @@
+body {
+  background: #EEE;
+  font-family: sans-serif;
+  line-height: 1.45;
+}
 
+.image-block
+{
+	box-sizing: content-box;
+}
