@@ -3,6 +3,12 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Raspi - Webcontrol</title>
+	
+  	<!-- Compiled and minified CSS -->
+  	<link rel="stylesheet" href="/assets/css/materialize.min.css">
+
+  	<!-- Compiled and minified JavaScript -->
+  	<script src="/assets/js/materialize.min.js"></script>	
 </head>
 <body>
   <div id="header">
