@@ -5,13 +5,9 @@
     <div class="col s6 m4 l2">
         <div class="card">
             <div class="card-image">
-                <?php echo FontChar::GetChar(substr($Service->ServiceName, 0, 1)); ?>
-                <span class="css_char <?php echo substr($Service->ServiceName, 0, 1); ?>">
-                  <span class="inside split_vert"></span>
-                  <span class="outside split_vert"></span>
-                  <span class="stroke"></span>
-                  <span class="fill"></span>
-                </span>
+                <div class="image-block size140 standard">
+                    <?php echo FontChar::GetChar(substr($Service->ServiceName, 0, 1)); ?>
+                </div>
                 <span class="card-title"><?php echo $Service->ServiceName; ?></span>
             </div>
             <div class="card-content">
