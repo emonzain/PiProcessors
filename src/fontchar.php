@@ -5,7 +5,7 @@ class FontChar
   static public function GetChar($item, $class = "")
   {
     $caracGen = new FontChar();
-    return "<span class='".$class." css_char ".$item."'>".$caracGen->$item."</span>";
+    return "<span class='".$class." css_char ".$item."'>".$caracGen->$item()."</span>";
   }
 
   public function a()
