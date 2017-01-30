@@ -6,6 +6,7 @@
 	
   	<!-- Compiled and minified CSS -->
   	<link rel="stylesheet" href="/assets/css/materialize.min.css">
+  	<link rel="stylesheet" href="/assets/css/curtisfont.css">
 
   	<!-- Compiled and minified JavaScript -->
   	<script src="/assets/js/materialize.min.js"></script>	
