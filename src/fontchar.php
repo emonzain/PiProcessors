@@ -1,6 +1,6 @@
 <?php
 
-public class FontChar
+class FontChar
 {
   static public function GetChar($item, $class = "")
   {
