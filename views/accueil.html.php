@@ -2,7 +2,7 @@
 <div class="row">
     
 <?php foreach($Model as $Service): ?>
-    <div class="col s2 m4 l6">
+    <div class="col s6 m4 l2">
         <div class="card">
             <div class="card-image">
                 <span class="css_char <?php echo substr($Service->ServiceName, 0, 1); ?>">
