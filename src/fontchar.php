@@ -183,7 +183,7 @@ class FontChar
             <span class='right split_horiz'></span>";
   }
 
-  public function question()>
+  public function question()
   {
     return "<span class='stroke'></span>
           <span class='neg'></span>
@@ -197,7 +197,9 @@ class FontChar
             <span class='dot fill'></span>";
   }
 
-public function period()
-  { return "<span class='dot fill'></span>";}
-  
+  public function period()
+  { 
+	return "<span class='dot fill'></span>";
+  }
+	  
 }
