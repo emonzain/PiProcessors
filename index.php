@@ -4,6 +4,7 @@ require_once 'lib/limonade.php';
 require_once 'lib/limonade_extends.php';
 require_once 'src/piprocess.php';
 require_once 'src/piservice.php';
+require_once 'src/fontchar.php';
 require_once 'controllers/process_controller.php';
 require_once 'controllers/debugview_controller.php';
 
