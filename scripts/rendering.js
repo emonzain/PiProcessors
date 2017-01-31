@@ -1,4 +1,4 @@
-.ready(
+$(document).ready(
   function()
   {
     //Binding resizable items
