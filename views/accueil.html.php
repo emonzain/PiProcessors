@@ -11,7 +11,7 @@
 			<?php echo FontChar::GetChar(substr($Service->ServiceName, 0, 1)); ?>
 		    </div>
 		</div>
-		<div>
+		</div>
                 <span class="card-title"><?php echo $Service->ServiceName; ?></span>
                 
             </div>
