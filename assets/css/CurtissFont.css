@@ -50,9 +50,7 @@
   position: relative;
   height: 140px;
   display: block;
-  float: left;
   overflow: hidden;
-  margin: 0 5px 20px 0;
 }
 .standard .css_char { text-indent: -9999px; }
 .inspect .css_char { text-indent: 0; }
