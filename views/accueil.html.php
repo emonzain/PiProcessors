@@ -4,12 +4,14 @@
 <?php foreach($Model as $Service): ?>
     <div class="col s6 m4 l2">
         <div class="card">
-            <div class="card-image">
-				<div class="circle fontchar-color-red">
-                    <div class="image-block size140">
-                        <?php echo FontChar::GetChar(substr($Service->ServiceName, 0, 1)); ?>
-                    </div>
-                </div>
+            <div class="card-image ratio square">
+		<div>
+		<div class="circle fontchar-color-red">
+		    <div class="image-block size140">
+			<?php echo FontChar::GetChar(substr($Service->ServiceName, 0, 1)); ?>
+		    </div>
+		</div>
+		<div>
                 <span class="card-title"><?php echo $Service->ServiceName; ?></span>
                 
             </div>
