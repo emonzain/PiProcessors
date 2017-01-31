@@ -7,8 +7,11 @@ body {
 .image-block
 {
 	box-sizing: content-box;
-	display: inline-block;
 }
+
+
+
+/****** RATIOS ******/
 
 .ratio.square {
     width: 100%;
