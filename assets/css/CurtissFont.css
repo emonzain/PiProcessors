@@ -49,7 +49,7 @@
 .css_char {
   position: relative;
   height: 140px;
-  display: block;
+  display: inline-block;
   overflow: hidden;
 }
 .standard .css_char { text-indent: -9999px; }
