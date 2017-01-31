@@ -1,41 +1,50 @@
-﻿
 
 
 /********** defaults for all characters all font sizes **********/
 
 
-.standard .css_char .fill { background: #000; }
-.standard .css_char .neg { background: #EEE; }
-.standard .css_char .stroke,
-.standard .css_char .neg_stroke,
-.standard .css_char .split_vert,
-.standard .css_char .split_horiz,
-.standard .css_char .split_horiz_pos,
-.standard .css_char .split_horiz_neg { border: 0px solid; }
-.standard .css_char .stroke { border-color: #000; }
-.standard .css_char .split_vert { border-color: #000 transparent; }
-.standard .css_char .split_horiz { border-color: #EEE transparent; }
-.standard .css_char .split_horiz_pos { border-color: transparent #000; }
-.standard .css_char .split_horiz_neg { border-color: transparent #EEE; }
+
+.css_char .stroke,
+.css_char .neg_stroke,
+.css_char .split_vert,
+.css_char .split_horiz,
+.css_char .split_horiz_pos,
+.css_char .split_horiz_neg { border: 0px solid; }
+
+.css_char .fill { background: #FFF; }
+.css_char .stroke { border-color: #FFF; }
+.css_char .split_vert { border-color: #FFF transparent; }
+.css_char .split_horiz_pos { border-color: transparent #FFF; }
 
 
-.inspect { background: url(grid.png); }
+.fontchar-color-yellow { background: #F6F792; }
+.fontchar-color-marine { background: #333745; }
+.fontchar-color-piscine { background: #77C4D3; }
+.fontchar-color-lightblue { background: #DAEDE2; }
+.fontchar-color-red { background: #EA2E49; }
 
-.inspect * { background: hsla(0,100%,50%,.07); }
 
-.inspect .css_char .fill { background: hsla(0,100%,50%,.4); }
-.inspect .css_char .neg { background: hsla(240,50%,50%,.15); }
-.inspect .css_char .stroke,
-.inspect .css_char .neg_stroke,
-.inspect .css_char .split_vert,
-.inspect .css_char .split_horiz,
-.inspect .css_char .split_horiz_pos,
-.inspect .css_char .split_horiz_neg { border: 0px solid; }
-.inspect .css_char .stroke { border-color: hsla(0,100%,50%,.4); }
-.inspect .css_char .split_vert { border-color: hsla(0,100%,50%,.4) transparent; }
-.inspect .css_char .split_horiz { border-color: hsla(240,50%,50%,.15) transparent; }
-.inspect .css_char .split_horiz_pos { border-color: transparent hsla(0,100%,50%,.4); }
-.inspect .css_char .split_horiz_neg { border-color: transparent hsla(240,50%,50%,.15); }
+.fontchar-color-yellow .css_char .split_horiz { border-color: #F6F792 transparent; }
+.fontchar-color-yellow .css_char .split_horiz_neg { border-color: transparent #F6F792; }
+.fontchar-color-yellow .css_char .neg { background: #F6F792; }
+
+.fontchar-color-marine .css_char .split_horiz { border-color: #333745 transparent; }
+.fontchar-color-marine .css_char .split_horiz_neg { border-color: transparent #333745; }
+.fontchar-color-marine .css_char .neg { background: #333745; }
+
+.fontchar-color-piscine .css_char .split_horiz { border-color: #77C4D3 transparent; }
+.fontchar-color-piscine .css_char .split_horiz_neg { border-color: transparent #77C4D3; }
+.fontchar-color-piscine .css_char .neg { background: #77C4D3; }
+
+.fontchar-color-lightblue .css_char .split_horiz { border-color: #DAEDE2 transparent; }
+.fontchar-color-lightblue .css_char .split_horiz_neg { border-color: transparent #DAEDE2; }
+.fontchar-color-lightblue .css_char .neg { background: #DAEDE2; }
+
+.fontchar-color-red .css_char .split_horiz { border-color: #EA2E49 transparent; }
+.fontchar-color-red .css_char .split_horiz_neg { border-color: transparent #EA2E49; }
+.fontchar-color-red .css_char .neg { background: #EA2E49; }
+
+
 
 .css_char {
   position: relative;
