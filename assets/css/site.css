@@ -6,7 +6,8 @@ body {
 
 .image-block
 {
-	box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 10px;
 }
 
 
