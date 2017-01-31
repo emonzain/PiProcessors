@@ -8,8 +8,8 @@
 		<div class="image-block">
 		    <div class="circle ratio square fontchar-color-red">
 		        <div class="size140 valign-wrapper">
-			    <div class="valign center-align" style="width: 100%;">
-				<?php echo FontChar::GetChar(substr($Service->ServiceName, 0, 1), ""); ?>
+			    <div class="valign center-align" style="width: 100%;" data-init-size="240">
+				<?php echo FontChar::GetChar(substr($Service->ServiceName, 0, 1), "resizable-scale"); ?>
 			    </div>
 		        </div>
 		    </div>
