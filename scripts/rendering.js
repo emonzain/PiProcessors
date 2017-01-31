@@ -15,6 +15,6 @@ $(document).ready(
           '-o-transform'      : 'scale(' + initSize / 140 + ')',
           'transform'         : 'scale(' + initSize / 140 + ')'
         });
-      }    
+    });
   }
 );
