@@ -12,6 +12,8 @@
   	<!-- Compiled and minified JavaScript -->
   	<script src="/assets/js/jquery-3.1.1.min.js"></script>	
   	<script src="/assets/js/materialize.min.js"></script>	
+	
+	<script src="/scripts/rendering.js"></script>
 </head>
 <body>
   <div id="header">
