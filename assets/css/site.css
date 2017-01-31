@@ -7,7 +7,7 @@ body {
 .image-block
 {
 	box-sizing: content-box;
-	display: inline-box;
+	display: inline-block;
 }
 
 .ratio.square {
