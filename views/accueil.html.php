@@ -13,8 +13,8 @@
 			    </div>
 		        </div>
 		    </div>
-		</div>
-                <span class="card-title"><?php echo $Service->ServiceName; ?></span>                
+                    <span class="card-title"><?php echo $Service->ServiceName; ?></span>   
+		</div>             
             </div>
             <div class="card-content">
                 <p><?php echo $Service->ServiceDesc; ?></p>
