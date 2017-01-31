@@ -14,8 +14,14 @@ body {
     width: 100%;
     text-align: center;
     padding: 15px 0 !important;
+    opacity: 0.8;
 }
+ 
 
+.image-block .css_char
+{    
+    opacity: 0.5;
+}
 
 /****** RATIOS ******/
 
