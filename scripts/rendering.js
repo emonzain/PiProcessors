@@ -2,7 +2,7 @@ $(document).ready(
   function()
   {
     //Binding resizable items
-    $(".resizable-scale:parent").resize( function()
+    $(".resizable-scale").parents(".card").resize( function()
       {
         var $parent = $(this);
         var $elem = $parent.find(".resizable-scale");
