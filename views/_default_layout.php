@@ -16,6 +16,8 @@
   	<script src="/assets/js/materialize.min.js"></script>	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
 	
+	<script src="/scripts/ajax_extender.js"></script>
+	
 	<script src="/scripts/rendering.js"></script>
 	
 	<script src="/scripts/ViewModels/ServiceVM.js"></script>
