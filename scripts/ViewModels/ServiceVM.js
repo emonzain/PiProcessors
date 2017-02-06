@@ -38,13 +38,55 @@ var ServiceVM = function(model)
 	
 	self.RunService = function()
 	{
-		alert("run !");
+		if(!self.IsRunning())
+		{
+			$.ajax({
+			    method: 'POST',
+			    dataType: "json",
+			    url: "/service/" + self.Name + "/on",
+			    contentType: "application/json",
+			    beforeSend: function () {
+			    },
+			    complete: function () {
+			    },
+			    success:
+				function (allData) {
+				    self.EndRefresh();
+				},
+			    error: function (XMLHttpRequest, textStatus, errorThrown) {
+				alert("Erreur");
+				//self.actionEnCoursDocuments(false);
+			    }
+			});
+		}
+		
 		self.IsRunning(true);
 	}
 	
 	self.StopService = function()
 	{
-		alert("stop !");
+		if(self.IsRunning())
+		{
+			$.ajax({
+			    method: 'POST',
+			    dataType: "json",
+			    url: "/service/" + self.Name + "/off",
+			    contentType: "application/json",
+			    beforeSend: function () {
+			    },
+			    complete: function () {
+			    },
+			    success:
+				function (allData) {
+				    self.EndRefresh();
+				},
+			    error: function (XMLHttpRequest, textStatus, errorThrown) {
+				alert("Erreur");
+				//self.actionEnCoursDocuments(false);
+			    }
+			});
+		}
+		
 		self.IsRunning(false);
 	}
 	
