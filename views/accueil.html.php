@@ -32,14 +32,16 @@ var servicesArray = new Array();
                 <p><?php echo $Service->ServiceDesc; ?></p>
             </div>
             <div class="card-action">
-				<span class="left-align">
-					<i class="ico-btn material-icons blue-text text-darken-3" id="btnLoaded" data-bind="css: IsActive() ? 'enabled' : 'disabled' ">done</i>
-					<i class="ico-btn material-icons" id="btnLoaded" data-bind="click: Refresh, css: Waiting() ? 'spinning' : '' ">loop</i>
-				</span>
-				<span class="right-align">
-					<i class="ico-btn material-icons red-text text-accent-4" id="btnRun" data-bind="click:ToggleService, css: IsRunning() ? 'enabled' : 'disabled' ">stop</i>
-					<i class="ico-btn material-icons light-green-text text-accent-3" id="btnStop" data-bind="click:ToggleService, css: !IsRunning() ? 'enabled' : 'disabled'">play_arrow</i>
-				</span>
+		<div class="row">
+			<div class="col m9 left-align">
+				<i class="ico-btn material-icons blue-text text-darken-3" id="btnLoaded" data-bind="css: IsActive() ? 'enabled' : 'disabled' ">done</i>
+				<i class="ico-btn material-icons" id="btnLoaded" data-bind="click: Refresh, css: Waiting() ? 'spinning' : '' ">loop</i>
+			</div>
+			<div class="col m3 right-align">
+				<i class="ico-btn material-icons red-text text-accent-4" id="btnRun" data-bind="click:ToggleService, css: IsRunning() ? 'enabled' : 'disabled' ">stop</i>
+				<i class="ico-btn material-icons light-green-text text-accent-3" id="btnStop" data-bind="click:ToggleService, css: !IsRunning() ? 'enabled' : 'disabled'">play_arrow</i>
+			</div>
+		</div>
             </div>
         </div>
     </div>        
