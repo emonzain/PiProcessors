@@ -1,4 +1,4 @@
-var ServiceVM = function(name)
+var ServiceVM = function(model)
 {
 	var self = this;
 	
