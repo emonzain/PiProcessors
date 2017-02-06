@@ -29,6 +29,12 @@ body {
   cursor: pointer;
 }
 
+.ico-btn.disabled
+{
+  color: #333;
+  cursor: pointer;
+}
+
 
 /****** RATIOS ******/
 
