@@ -80,7 +80,7 @@ $(document).ready(function()
 		var $this = $(this);
 		var datakey = $this.data("model");
 		
-		ko.applyBindings(servicesArray[datakey], document.getElementById($this.attr(id)));
+		ko.applyBindings(servicesArray[datakey], document.getElementById($this.attr('id')));
 	});
 });
 
