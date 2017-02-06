@@ -29,14 +29,10 @@ body {
   cursor: pointer;
 }
 
-.ico-btn
-{
-  cursor: pointer;
-}
-
 .ico-btn.disabled
 {
   color: #333 !important;
+  cursor: default;
 }
 
 
