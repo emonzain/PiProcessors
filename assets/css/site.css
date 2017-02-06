@@ -23,6 +23,13 @@ body {
     opacity: 0.5;
 }
 
+.ico-btn.enabled
+{
+  color: #46db55;
+  cursor: pointer;
+}
+
+
 /****** RATIOS ******/
 
 .ratio.square {
@@ -39,3 +46,6 @@ body {
     bottom: 0;
     right: 0;
 }
+
+
+
