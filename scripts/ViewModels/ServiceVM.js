@@ -43,7 +43,7 @@ var ServiceVM = function(model)
 			$.ajax({
 			    method: 'POST',
 			    dataType: "json",
-			    url: "/service/" + self.Name + "/on",
+			    url: "/service/" + self.Name() + "/on",
 			    contentType: "application/json",
 			    beforeSend: function () {
 			    },
@@ -69,7 +69,7 @@ var ServiceVM = function(model)
 			$.ajax({
 			    method: 'POST',
 			    dataType: "json",
-			    url: "/service/" + self.Name + "/off",
+			    url: "/service/" + self.Name() + "/off",
 			    contentType: "application/json",
 			    beforeSend: function () {
 			    },
@@ -101,7 +101,7 @@ var ServiceVM = function(model)
 		$.ajax({
 			    method: 'POST',
 			    dataType: "json",
-			    url: "/service/" + self.Name,
+			    url: "/service/" + self.Name(),
 			    contentType: "application/json",
 			    beforeSend: function () {
 			    },
