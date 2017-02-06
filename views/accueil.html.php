@@ -10,7 +10,7 @@ var servicesArray = new Array();
 
 	<script type="text/javascript">
 
-	servicesArray["<?php echo $Service->ServiceName ?>"] = <?php echo json_encode($Service) ?>;
+	servicesArray["<?php echo $Service->ServiceName ?>"] = new ServiceVM(<?php echo json_encode($Service) ?>);
 
 	</script>
 	
