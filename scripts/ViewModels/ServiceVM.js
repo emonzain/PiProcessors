@@ -18,20 +18,21 @@ var ServiceVM = function(model)
 	
 	self.Refresh = function()
 	{
-		self.Waiting(true);
+		self.Waiting(true);		
+		setTimeout(self.EndRefresh, 1000);
+	}
+	
+	self.EndRefresh = function()
+	{
+		self.Waiting(false);
 		
 		if(self.Timer != null)
 		{
 			clearTimeout(self.Timer);
 		}
 		
-		self.Timer = setTimeout(self.EndRefresh, 1000);
-	}
-	
-	self.EndRefresh = function()
-	{
-		self.Waiting(false);
-		setTimeout(self.Refresh, 5000);
+		self.Timer = setTimeout(self.Refresh, 5000);
+		
 	}
 	
 	
