@@ -41,7 +41,7 @@ var ServiceVM = function(model)
 		if(!self.IsRunning())
 		{
 			$.ajax({
-			    method: 'POST',
+			    method: 'GET',
 			    dataType: "json",
 			    url: "/service/" + self.Name() + "/on",
 			    contentType: "application/json",
@@ -67,7 +67,7 @@ var ServiceVM = function(model)
 		if(self.IsRunning())
 		{
 			$.ajax({
-			    method: 'POST',
+			    method: 'GET',
 			    dataType: "json",
 			    url: "/service/" + self.Name() + "/off",
 			    contentType: "application/json",
@@ -99,7 +99,7 @@ var ServiceVM = function(model)
 	self.UpdateInfos = function()
 	{			
 		$.ajax({
-			    method: 'POST',
+			    method: 'GET',
 			    dataType: "json",
 			    url: "/service/" + self.Name(),
 			    contentType: "application/json",
