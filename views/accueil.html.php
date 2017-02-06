@@ -33,11 +33,11 @@ var servicesArray = new Array();
             </div>
             <div class="card-action">
 				<span class="left-align">
-					<i class="material-icons" id="btnLoaded">done</i>
+					<i class="material-icons" id="btnLoaded" data-bind="css: IsActive ? 'enabled' : 'disabled' ">done</i>
 				</span>
 				<span class="right-align">
-					<i class="material-icons" id="btnRun" data-bind="click:ToggleService">stop</i>
-					<i class="material-icons" id="btnStop">play_arrow</i>
+					<i class="material-icons" id="btnRun" data-bind="click:ToggleService, css: IsRunning ? 'enabled' : 'disabled' ">stop</i>
+					<i class="material-icons" id="btnStop" data-bind="click:ToggleService, css: !IsRunning ? 'enabled' : 'disabled'">play_arrow</i>
 				</span>
             </div>
         </div>
