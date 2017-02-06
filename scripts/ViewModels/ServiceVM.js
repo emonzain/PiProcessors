@@ -25,7 +25,7 @@ var ServiceVM = function(model)
 	
 	self.ToggleService = function()
 	{
-		if(self.IsRunning)
+		if(self.IsRunning())
 			self.StopService();
 		else
 			self.RunService();		
