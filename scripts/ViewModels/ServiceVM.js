@@ -10,12 +10,22 @@ var ServiceVM = function(model)
     self.IsRunning = ko.observable(model.IsRunning);
     self.IsLoaded = ko.observable(model.IsLoaded);
 	
+	
 	self.Waiting = ko.observable(false);
+	
+	self.Timer = null;
+	
 	
 	self.Refresh = function()
 	{
 		self.Waiting(true);
-		setTimeout(self.EndRefresh, 1000);
+		
+		if(self.Timer != null)
+		{
+			clearTimeout(self.Timer);
+		}
+		
+		self.Timer = setTimeout(self.EndRefresh, 1000);
 	}
 	
 	self.EndRefresh = function()
@@ -45,4 +55,5 @@ var ServiceVM = function(model)
 			self.RunService();		
 	}
 	
+	self.EndRefresh();
 }
