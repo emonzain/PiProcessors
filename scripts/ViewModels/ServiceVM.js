@@ -19,7 +19,7 @@ var ServiceVM = function(model)
 	self.Refresh = function()
 	{
 		self.Waiting(true);		
-		setTimeout(self.EndRefresh, 1000);
+		setTimeout(self.UpdateInfos, 1000);
 	}
 	
 	self.EndRefresh = function()
