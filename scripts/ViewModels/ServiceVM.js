@@ -48,19 +48,18 @@ var ServiceVM = function(model)
 			    beforeSend: function () {
 			    },
 			    complete: function () {
+				    self.EndRefresh();
 			    },
 			    success:
 				function (allData) {
-				    self.EndRefresh();
+				    self.IsRunning(true);
 				},
 			    error: function (XMLHttpRequest, textStatus, errorThrown) {
 				alert("Erreur");
 				//self.actionEnCoursDocuments(false);
 			    }
 			});
-		}
-		
-		self.IsRunning(true);
+		}		
 	}
 	
 	self.StopService = function()
@@ -75,19 +74,18 @@ var ServiceVM = function(model)
 			    beforeSend: function () {
 			    },
 			    complete: function () {
+				    	self.EndRefresh();
 			    },
 			    success:
 				function (allData) {
-				    self.EndRefresh();
+					self.IsRunning(false);
 				},
 			    error: function (XMLHttpRequest, textStatus, errorThrown) {
 				alert("Erreur");
 				//self.actionEnCoursDocuments(false);
 			    }
 			});
-		}
-		
-		self.IsRunning(false);
+		}		
 	}
 	
 	self.ToggleService = function()
@@ -97,6 +95,30 @@ var ServiceVM = function(model)
 		else
 			self.RunService();		
 	}
+	
+	self.UpdateInfos = function()
+	{			
+		$.ajax({
+			    method: 'POST',
+			    dataType: "json",
+			    url: "/service/" + self.Name,
+			    contentType: "application/json",
+			    beforeSend: function () {
+			    },
+			    complete: function () {
+				    	self.EndRefresh();
+			    },
+			    success:
+				function (allData) {
+					alert(allData);
+				},
+			    error: function (XMLHttpRequest, textStatus, errorThrown) {
+				alert("Erreur");
+				//self.actionEnCoursDocuments(false);
+			    }
+			});
+	}
+	
 	
 	self.EndRefresh();
 }
