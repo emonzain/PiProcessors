@@ -57,9 +57,13 @@ dispatch('/service/:name', 'service_infos');
 		
 		$service = new PiService($proc_name);
 		
-		$json_object = array('item' => $service ,'action' => 'info', 'result' => $service != null );
+				
+		$object = new ApiResult();
+		$object->Result = $service != null;
+		$object->Details = "infos";
+		$object->Item = $service;
 		
-		return json($json_object);
+		return json($object);
 	}
 	
 dispatch('/service/:name/:action', 'actionservice');
@@ -69,9 +73,9 @@ dispatch('/service/:name/:action', 'actionservice');
 		$do_action = params('action');
 		
 		$service = new PiService($proc_name);
-		$result = $service->do_action($do_action);
+		$json_object = $service->do_action($do_action);
 		
-		$json_object = array('item' => $result ,'action' => 'info', 'result' => $result != null );
+		// = array('item' => $result ,'action' => 'info', 'result' => $result != null );
 		
 		return json($json_object);
 	}

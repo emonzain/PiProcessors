@@ -19,7 +19,7 @@ var ServiceVM = function(model)
 	self.Refresh = function()
 	{
 		self.Waiting(true);		
-		setTimeout(self.UpdateInfos, 1000);
+		self.UpdateInfos();
 	}
 	
 	self.EndRefresh = function()
@@ -31,8 +31,7 @@ var ServiceVM = function(model)
 			clearTimeout(self.Timer);
 		}
 		
-		self.Timer = setTimeout(self.Refresh, 5000);
-		
+		self.Timer = setTimeout(self.Refresh, 50000);		
 	}
 	
 	
@@ -52,7 +51,8 @@ var ServiceVM = function(model)
 			    },
 			    success:
 				function (allData) {
-				    self.IsRunning(true);
+					self.SetData(allData.Item);
+					self.IsRunning(true);
 				},
 			    error: function (XMLHttpRequest, textStatus, errorThrown) {
 				alert("Erreur");
@@ -74,10 +74,11 @@ var ServiceVM = function(model)
 			    beforeSend: function () {
 			    },
 			    complete: function () {
-				    	self.EndRefresh();
+				    self.EndRefresh();
 			    },
 			    success:
 				function (allData) {
+					self.SetData(allData.Item);
 					self.IsRunning(false);
 				},
 			    error: function (XMLHttpRequest, textStatus, errorThrown) {
@@ -106,17 +107,31 @@ var ServiceVM = function(model)
 			    beforeSend: function () {
 			    },
 			    complete: function () {
-				    	self.EndRefresh();
+				    self.EndRefresh();
 			    },
 			    success:
 				function (allData) {
-					alert(allData);
+					self.SetData(allData.Item);
 				},
 			    error: function (XMLHttpRequest, textStatus, errorThrown) {
 				alert("Erreur");
 				//self.actionEnCoursDocuments(false);
 			    }
 			});
+	}
+	
+	self.SetData = function(data)
+	{
+		if(data != null)
+		{
+			self.Name(data.ServiceName);
+			self.Status(data.ServiceStatus)
+			self.Desc(data.ServiceDesc);
+			
+			self.IsActive(data.IsActive);
+			self.IsRunning(data.IsRunning);
+			self.IsLoaded(data.IsLoaded);
+		}
 	}
 	
 	
