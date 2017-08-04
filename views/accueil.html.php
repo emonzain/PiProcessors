@@ -82,7 +82,7 @@ var servicesArray = new Array();
                 <th data-field="IsRunning">Running</th>
             </tr>
         </thead>
-<?php foreach($Model as $Service): ?>
+<?php foreach($Model['services'] as $Service): ?>
         <tbody>
             <tr>
                 <td><?php echo $Service->ServiceName; ?></td>
