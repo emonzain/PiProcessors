@@ -15,7 +15,7 @@ class ActionScriptController
 		$newProcess = new PiActionScript("Open Door", "action_opendoor.sh", "opd");
 		array_push($actionsList, $newProcess);
 		
-		return json($actionsList);
+		return $actionsList;
 	}
 	
 	
