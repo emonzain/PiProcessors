@@ -6,7 +6,7 @@ var servicesArray = new Array();
 
 <div class="row">
     <div class="col-xs-6 col-md-6">
-<?php foreach($Model as $Service): ?>
+<?php foreach($Model['services'] as $Service): ?>
 
 	<script type="text/javascript">
 
@@ -58,7 +58,7 @@ var servicesArray = new Array();
             			</tr>
         		</thead>
 			<tbody>
-			<?php foreach($Model as $ActionScript): ?>
+			<?php foreach($Model['actionscript'] as $ActionScript): ?>
 				<tr>
 					<td><?php echo $ActionScript->ActionName; ?></td>
 					<td><?php echo $ActionScript->ScriptFile; ?></td>
