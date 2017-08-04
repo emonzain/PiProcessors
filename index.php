@@ -33,7 +33,7 @@ dispatch('/accueil', 'accueil');
 	function accueil()
 	{
 		$processes = ProcessController::ListOfServices();
-		$actionscript = ProcessController::ListOfActions();
+		$actionscript = ActionScriptController::ListOfActions();
 		
 		$accueilModel = array('services' => $processes, 'actions' => $actionscript);
 		
