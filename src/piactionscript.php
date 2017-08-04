@@ -5,16 +5,18 @@ require_once("apiresult.php");
 class PiActionScript { 
 
     public $ActionName = '';
+    public $ActionCode = '';
     public $ActionUser = '';
     public $ActionUserGroup = '';
     public $ActionArgs = '';
     public $ScriptFile = '';
     
     
-	function __construct($name, $script)
+	function __construct($name, $script, $code)
 	{
 		$this->ActionName = $name;
 		$this->ScriptFile = $script;
+		$this->ActionCode = $code;
 	}
 	
 	
