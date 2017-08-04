@@ -9,9 +9,7 @@ var ActionScriptVM = function(model)
 		
 	
 	self.Waiting = ko.observable(false);
-	
-	self.Timer = null;
-	
+		
 	
 	self.Refresh = function()
 	{
@@ -21,13 +19,6 @@ var ActionScriptVM = function(model)
 	self.EndRefresh = function()
 	{
 		self.Waiting(false);
-		
-		if(self.Timer != null)
-		{
-			clearTimeout(self.Timer);
-		}
-		
-		self.Timer = setTimeout(self.Refresh, 50000);		
 	}
 	
 	
