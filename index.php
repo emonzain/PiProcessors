@@ -55,7 +55,7 @@ dispatch('/process/:name/:action', 'actionprocess');
 	}
 	
 	
-dispatch('/actionscript/:name/:code/:args', 'actionscript');
+dispatch('/actionscript/:code/:args', 'actionscript');
 	function actionscript()
 	{		
 		$actioncode = params('code');

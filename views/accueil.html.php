@@ -1,7 +1,13 @@
 <script type="text/javascript">
 
 var servicesArray = new Array();
+var actionsArray = new Array();
 
+<?php foreach($Model['actions'] as $ActionScript): ?>
+
+	actionsArray["<?php echo $ActionScript->ActionCode ?>"] = new ActionScriptVM(<?php echo json_encode($ActionScript) ?>);
+
+<?php endforeach; ?>
 </script>
 
 <div class="row">
@@ -62,8 +68,11 @@ var servicesArray = new Array();
         		</thead>
 			<tbody>
 			<?php foreach($Model['actions'] as $ActionScript): ?>
-				<tr>
-					<td><i class="ico-btn material-icons light-green-text text-accent-3 disabled" id="btnRunAction" data-bind="click:RunAction, css: !IsRunning() ? 'enabled' : 'disabled'">play_arrow</i></td>
+				<tr class="actionscript-desc" id="actionscript-<?php echo $ActionScript->ActionCode ?>" data-model="<?php echo $ActionScript->ActionCode ?>">
+					<td>
+						<i class="ico-btn material-icons light-green-text text-accent-3 disabled" id="btnRunAction" data-bind="click:RunAction, visibility: !IsRunning(), css: !IsRunning() ? 'enabled' : 'disabled'">play_arrow</i>
+						<i class="ico-btn material-icons" id="btnLoaded" data-bind="visibility: Waiting(), css: Waiting() ? 'spinning' : '' ">loop</i>
+					</td>
 					<td><?php echo $ActionScript->ActionName; ?></td>
 					<td><?php echo $ActionScript->ScriptFile; ?></td>
 					<td><?php echo $ActionScript->ActionUser; ?></td>
@@ -110,6 +119,14 @@ $(document).ready(function()
 		var datakey = $this.data("model");
 		
 		ko.applyBindings(servicesArray[datakey], document.getElementById($this.attr('id')));
+	});
+	
+	$(".actionscript-desc").each( function() 
+	{
+		var $this = $(this);
+		var datakey = $this.data("model");
+		
+		ko.applyBindings(actionsArray[datakey], document.getElementById($this.attr('id')));
 	});
 });
 

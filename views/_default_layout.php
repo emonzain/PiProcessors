@@ -21,6 +21,7 @@
 	<script src="/scripts/rendering.js"></script>
 	
 	<script src="/scripts/ViewModels/ServiceVM.js"></script>
+	<script src="/scripts/ViewModels/ActionScriptVM.js"></script>
 </head>
 <body>
   <div id="header">

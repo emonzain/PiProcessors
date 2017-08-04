@@ -45,6 +45,7 @@ var ServiceVM = function(model)
 			    url: "/service/" + self.Name() + "/on",
 			    contentType: "application/json",
 			    beforeSend: function () {
+					self.Waiting(true);		
 			    },
 			    complete: function () {
 				    self.EndRefresh();
