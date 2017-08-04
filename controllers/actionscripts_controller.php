@@ -20,9 +20,9 @@ class ActionScriptController
 	
 	
 	
-	static public function ListOfActions()
+	static public function ListOfActionsJson()
 	{
-		return json(ProcessController::ListOfServices());
+		return json(ActionScriptController::ListOfActions());
 	}
 }
 
