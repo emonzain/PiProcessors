@@ -43,9 +43,8 @@ var servicesArray = new Array();
 			</div>
 		</div>
             </div>
-        </div>
-    </div>        
-<?php endforeach; ?>
+        </div>   
+	<?php endforeach; ?>
     
     <div class="col s6 col m6 l6">
 		
