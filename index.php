@@ -61,7 +61,7 @@ dispatch('/actionscript/:code/:args', 'actionscript');
 		$actioncode = params('code');
 		$actionargs = params('args');
 		
-		$actionscript = PiActionScript::GetActionScript($actioncode);
+		$actionscript = ActionScriptController::GetActionScript($actioncode);
 		$result = $actionscript->do_action($actionargs);
 		
 		$json_object = array('item' => $actionscript, 'result' => $result);
