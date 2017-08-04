@@ -52,6 +52,7 @@ var servicesArray = new Array();
     		<table class="responsive-table striped">   
         		<thead>
             			<tr>
+					<th></th>
                 			<th data-field="Name">Name</th>
                 			<th data-field="File">Description</th>
 					<th data-field="IsLoaded">User</th>
@@ -60,10 +61,11 @@ var servicesArray = new Array();
 			<tbody>
 			<?php foreach($Model['actions'] as $ActionScript): ?>
 				<tr>
+					<td><i class="ico-btn material-icons light-green-text text-accent-3 disabled" id="btnRunAction" data-bind="click:RunAction, css: !IsRunning() ? 'enabled' : 'disabled'">play_arrow</i></td>
 					<td><?php echo $ActionScript->ActionName; ?></td>
 					<td><?php echo $ActionScript->ScriptFile; ?></td>
 					<td><?php echo $ActionScript->ActionUser; ?></td>
-				<tr>
+				</tr>
 			<?php endforeach; ?>					
 			</tbody>
 		</table>
