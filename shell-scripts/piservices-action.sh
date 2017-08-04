@@ -15,8 +15,11 @@
 #
 stop_all()
 {
-    echo "$(date)=> Stopping all targetted services" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt
-	sudo -u root  service kodi stop
+    echo "$(date)=> STOP - Start stopping all targetted services" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt
+
+	sudo service kodi stop | tee -a /var/www/html/webcontrol-limo/actions_loging.txt
+
+    echo "$(date)=> STOP - End stopping all targetted services" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt
 }
 
 #
@@ -25,9 +28,12 @@ stop_all()
 start_process()
 {
     stop_all
-    echo "$(date)=> Starting service $1" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt
-	
-	sudo -u root service $1 start
+
+    echo "$(date)=> START - Start starting service $1" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt
+
+    sudo service $1 start | tee -a /var/www/html/webcontrol-limo/actions_loging.txt
+
+    echo "$(date)=> START - End starting service $1" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt
 }
 
                                                                                                                                                               
