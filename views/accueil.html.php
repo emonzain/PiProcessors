@@ -44,8 +44,11 @@ var servicesArray = new Array();
 		</div>
             </div>
         </div>   
-	<?php endforeach; ?>
-    
+    </div>   
+    <?php endforeach; ?>
+  
+    </div>   
+	
     <div class="col s6 col m6 l6">
 		
     		<table class="responsive-table striped">   
