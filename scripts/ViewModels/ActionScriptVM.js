@@ -33,7 +33,7 @@ var ActionScriptVM = function(model)
 	
 	self.RunAction = function()
 	{
-		if(!self.IsRunning())
+		if(!self.Waiting())
 		{
 			$.ajax({
 			    method: 'GET',
@@ -48,7 +48,6 @@ var ActionScriptVM = function(model)
 			    },
 			    success:
 					function (allData) {
-					self.IsRunning(true);
 				},
 			    error: function (XMLHttpRequest, textStatus, errorThrown) {
 					alert("Erreur");
