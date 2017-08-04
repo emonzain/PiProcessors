@@ -2,10 +2,10 @@ var ActionScriptVM = function(model)
 {
 	var self = this;
 	
-	self.Name = ko.observable(model.ServiceName);
-	self.Code = ko.observable(model.ServiceStatus)
-	self.Args = ko.observable(model.ServiceDesc);
-	self.User = ko.observable(model.ServiceDesc);
+	self.Name = ko.observable(model.ActionName);
+	self.Code = ko.observable(model.ActionCode)
+	self.Args = ko.observable(model.ActionArgs);
+	self.User = ko.observable(model.ActionUser);
 		
 	
 	self.Waiting = ko.observable(false);
