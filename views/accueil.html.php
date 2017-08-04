@@ -58,7 +58,7 @@ var servicesArray = new Array();
             			</tr>
         		</thead>
 			<tbody>
-			<?php foreach($Model['actionscript'] as $ActionScript): ?>
+			<?php foreach($Model['actions'] as $ActionScript): ?>
 				<tr>
 					<td><?php echo $ActionScript->ActionName; ?></td>
 					<td><?php echo $ActionScript->ScriptFile; ?></td>
