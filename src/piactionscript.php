@@ -26,7 +26,7 @@ class PiActionScript {
 		$shellDirScript = $appDir."/shell-scripts/actionscript/".$this->ScriptFile;
 		
    		$execLine = $shellDirScript;
-    		foreach($arg as $args)
+    		foreach($args as $arg)
     		{
      			$execLine = $execLine." ".$arg;
     		}
