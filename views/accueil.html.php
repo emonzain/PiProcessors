@@ -5,7 +5,7 @@ var servicesArray = new Array();
 </script>
 
 <div class="row">
-    <div class="col-xs-6 col-md-6">
+    <div class="col s6 col m6 l6">
 <?php foreach($Model['services'] as $Service): ?>
 
 	<script type="text/javascript">
@@ -14,7 +14,7 @@ var servicesArray = new Array();
 
 	</script>
 	
-    <div class="col s6 m4 l2">
+    <div class="col s6 m4 l4">
         <div class="card service-desc" id="service-<?php echo $Service->ServiceName ?>" data-model="<?php echo $Service->ServiceName ?>">
             <div class="card-image">
 				<div class="image-block">
@@ -47,7 +47,7 @@ var servicesArray = new Array();
     </div>        
 <?php endforeach; ?>
     
-	<div class="col-xs-6 col-md-6">	
+    <div class="col s6 col m6 l6">
 		
     		<table class="responsive-table striped">   
         		<thead>
