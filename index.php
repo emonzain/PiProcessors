@@ -33,7 +33,11 @@ dispatch('/accueil', 'accueil');
 	function accueil()
 	{
 		$processes = ProcessController::ListOfServices();
-	  	return render('accueil.html.php', layout(), layoutViewBag("Mes services :)", $processes));
+		$actionscript = ProcessController::ListOfActions();
+		
+		$accueilModel = array('services' => $processes, 'actions' => $actionscript);
+		
+	  	return render('accueil.html.php', layout(), layoutViewBag("Mes services :)", $accueilModel));
 	}
 	
 dispatch('/process/:name/:action', 'actionprocess');
@@ -50,6 +54,21 @@ dispatch('/process/:name/:action', 'actionprocess');
 		return json($json_object);
 	}
 	
+	
+dispatch('/actionscript/:name/:code/:args', 'actionscript');
+	function actionscript()
+	{		
+		$actioncode = params('code');
+		$actionargs = params('args');
+		
+		$actionscript = PiActionScript::GetActionScript($actioncode);
+		$result = $actionscript->do_action($actionargs);
+		
+		$json_object = array('item' => $process ,'action' => "$do_action", 'result' => $result);
+		
+		return json($json_object);
+	}
+
 dispatch('/service/:name', 'service_infos');
 	function service_infos()
 	{		
@@ -83,6 +102,7 @@ dispatch('/service/:name/:action', 'actionservice');
 	
 dispatch('/process-list', 'ProcessController::ListOfProcess');
 dispatch('/service-list', 'ProcessController::ListOfServicesJson');
+dispatch('/action-list', 'ActionScriptController::ListOfActionsJson');
 	
 dispatch('/phplogs', 'PhpLogsReader::ShowPhpLogs');
 	
