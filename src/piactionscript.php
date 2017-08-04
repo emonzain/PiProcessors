@@ -23,17 +23,17 @@ class PiActionScript {
 		$appDir = option()['root_dir'];
 		$shellDirScript = $appDir."/shell-scripts/actionscript/".$this->ScriptFile;
 		
-    $execLine = $shellDirScript;
-    foreach($arg as $args)
-    {
-      $shellDirScript = $shellDirScript." ".$arg;
-    }
+   		$execLine = $shellDirScript;
+    		foreach($arg as $args)
+    		{
+     			$execLine = $execLine." ".$arg;
+    		}
     
 		$result = false;
 		$details = "";
     
 		$details .= exec("echo \"Starting action script : ".$this->ActionName." / ".$this->ScriptFile." ... Result : OK\" | tee -a /var/www/html/webcontrol-limo/actions_loging.txt");
-	  $details .= exec($shellDirScript." ".$this->ProcessName." start");
+	  	$details .= exec($execLine);
 		$result = true;
 		
 		
