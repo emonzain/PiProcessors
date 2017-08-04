@@ -5,7 +5,7 @@ var servicesArray = new Array();
 </script>
 
 <div class="row">
-    
+    <div class="col-xs-6 col-md-6">
 <?php foreach($Model as $Service): ?>
 
 	<script type="text/javascript">
@@ -47,6 +47,28 @@ var servicesArray = new Array();
     </div>        
 <?php endforeach; ?>
     
+	<div class="col-xs-6 col-md-6">	
+		
+    		<table class="responsive-table striped">   
+        		<thead>
+            			<tr>
+                			<th data-field="Name">Name</th>
+                			<th data-field="File">Description</th>
+					<th data-field="IsLoaded">User</th>
+            			</tr>
+        		</thead>
+			<tbody>
+			<?php foreach($Model as $ActionScript): ?>
+				<tr>
+					<td><?php echo $ActionScript->ActionName; ?></td>
+					<td><?php echo $ActionScript->ScriptFile; ?></td>
+					<td><?php echo $ActionScript->ActionUser; ?></td>
+				<tr>
+			<?php endforeach; ?>					
+			</tbody>
+		</table>
+	</div>
+	    
 </div>
 
 <div class="row">
