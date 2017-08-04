@@ -70,8 +70,8 @@ var actionsArray = new Array();
 			<?php foreach($Model['actions'] as $ActionScript): ?>
 				<tr class="actionscript-desc" id="actionscript-<?php echo $ActionScript->ActionCode ?>" data-model="<?php echo $ActionScript->ActionCode ?>">
 					<td>
-						<i class="ico-btn material-icons light-green-text text-accent-3 enabled" id="btnRunAction" data-bind="click:RunAction, visibility: !Waiting()">play_arrow</i>
-						<i class="ico-btn material-icons" id="btnLoaded" data-bind="visibility: Waiting(), css: Waiting() ? 'spinning' : '' ">loop</i>
+						<i class="ico-btn material-icons light-green-text text-accent-3 enabled" id="btnRunAction" data-bind="click:RunAction, visible: !Waiting()">play_arrow</i>
+						<i class="ico-btn material-icons" id="btnLoaded" data-bind="visible: Waiting(), css: Waiting() ? 'spinning' : '' ">loop</i>
 					</td>
 					<td><?php echo $ActionScript->ActionName; ?></td>
 					<td><?php echo $ActionScript->ScriptFile; ?></td>
