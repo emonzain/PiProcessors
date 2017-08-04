@@ -20,17 +20,23 @@ class PiActionScript {
 	}
 	
 	
-	function do_action($action, $args)
+	function do_action($args)
 	{
 		$appDir = option()['root_dir'];
 		$shellDirScript = $appDir."/shell-scripts/actionscript/".$this->ScriptFile;
 		
    		$execLine = $shellDirScript;
+		if($args != null && $args is array)
+		{
     		foreach($args as $arg)
     		{
      			$execLine = $execLine." ".$arg;
     		}
+		}
+		else if($args != null)
+     		$execLine = $execLine." ".$args;
     
+	
 		$result = false;
 		$details = "";
     
