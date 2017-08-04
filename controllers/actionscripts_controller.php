@@ -17,12 +17,25 @@ class ActionScriptController
 		
 		return $actionsList;
 	}
-	
-	
+		
 	
 	static public function ListOfActionsJson()
 	{
 		return json(ActionScriptController::ListOfActions());
+	}
+	
+	
+	static public function GetActionScript($actionCode)
+	{
+		$actions = ActionScriptController::ListOfActions();
+		
+		foreach($actions as $action)
+		{
+			if($action->ActionCode == $actionCode)
+				return $action;
+		}
+		
+		return null;
 	}
 }
 
