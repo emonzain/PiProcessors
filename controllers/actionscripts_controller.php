@@ -8,11 +8,11 @@ class ActionScriptController
 	{
 		$actionsList = array();
 			
-		$newProcess = new PiActionScript("Reboot", "action_reboot.sh", "toober");
+		$newProcess = new PiActionScript("Reboot", "action_reboot.sh", "toober", null);
 		array_push($actionsList, $newProcess);
 			
 			
-		$newProcess = new PiActionScript("Open Door", "action_opendoor.sh", "opd");
+		$newProcess = new PiActionScript("Open Door", "action_opendoor.sh", "opd", "pi1");
 		array_push($actionsList, $newProcess);
 		
 		return $actionsList;

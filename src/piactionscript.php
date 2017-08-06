@@ -12,11 +12,12 @@ class PiActionScript {
     public $ScriptFile = '';
     
     
-	function __construct($name, $script, $code)
+	function __construct($name, $script, $code, $target)
 	{
 		$this->ActionName = $name;
 		$this->ScriptFile = $script;
 		$this->ActionCode = $code;
+		$this->ActionTarget = $target;
 	}
 	
 	
