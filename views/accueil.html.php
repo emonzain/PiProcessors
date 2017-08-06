@@ -60,10 +60,11 @@ var actionsArray = new Array();
     		<table class="responsive-table striped">   
         		<thead>
             			<tr>
-					<th></th>
+							<th></th>
                 			<th data-field="Name">Name</th>
                 			<th data-field="File">Description</th>
-					<th data-field="IsLoaded">User</th>
+							<th data-field="User">User</th>
+							<th data-field="Target">Target</th>
             			</tr>
         		</thead>
 			<tbody>
@@ -76,6 +77,7 @@ var actionsArray = new Array();
 					<td><?php echo $ActionScript->ActionName; ?></td>
 					<td><?php echo $ActionScript->ScriptFile; ?></td>
 					<td><?php echo $ActionScript->ActionUser; ?></td>
+					<td><?php echo $ActionScript->ActionTarget; ?></td>
 				</tr>
 			<?php endforeach; ?>					
 			</tbody>
