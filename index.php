@@ -68,6 +68,17 @@ dispatch('/actionscript/:code/:args', 'actionscript');
 		
 		return json($json_object);
 	}
+	
+dispatch('/actions/:code', 'actionsdetails');
+	function actionscript()
+	{		
+		$actioncode = params('code');
+		
+		$actionscript = ActionScriptController::GetActionScript($actioncode);
+		
+		
+	  	return render('actiondetail.html.php', layout(), layoutViewBag($actionscript->ActionName, $actionscript));
+	}
 
 dispatch('/service/:name', 'service_infos');
 	function service_infos()
