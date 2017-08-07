@@ -15,10 +15,10 @@ var actionDetails = new ActionScriptVM(<?php echo json_encode($Model) ?>);
 	
 	<div class="valign-wrapper" style="width: 100%;" data-init-size="240">
 	      <div data-bind="visible: !Waiting()" class="center-align" style="width: 100%">
-		      <h1 style="color:rgba(255, 255, 255, 0.2);">DO</h1>
+		      <h1 style="color:rgba(255, 255, 255, 0.5); margin:0; font-weight: bold;">DO</h1>
 	      </div>
               <div data-bind="visible: Waiting()" class="center-align" style="width: 100%">
-                <h1 style="color:rgba(255, 255, 255, 0.2);" ><i class="ico-btn material-icons" id="btnLoaded" data-bind="css: Waiting() ? 'spinning' : '' ">loop</i></h1>
+                <h1 style="color:rgba(255, 255, 255, 0.5); margin:0; font-weight: bold;" ><i class="ico-btn material-icons" id="btnLoaded" data-bind="css: Waiting() ? 'spinning' : '' ">loop</i></h1>
               </div>
         </div>
 						    
