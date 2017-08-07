@@ -7,7 +7,7 @@ var actionDetails = new ActionScriptVM(<?php echo json_encode($Model) ?>);
 
 <div class="row">
   <div class="action-desc col s12 m4 l2 offset-l5 offset-m4" id="action-<?php echo $Model->ActionCode ?>">
-	<div>
+	<div class="center-align">
 		<h2><?php echo $Model->ActionName ?></h2>
 	  </div>
     <div class="ico-btn circle ratio square fontchar-color-red" data-bind="click: RunAction()">
