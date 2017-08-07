@@ -1,6 +1,6 @@
 <script type="text/javascript">
 
-var actionDetails = new ActionScriptVM(<?php echo json_encode($ActionScript) ?>);
+var actionDetails = new ActionScriptVM(<?php echo json_encode($Model) ?>);
 
 </script>
 
