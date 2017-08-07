@@ -77,7 +77,7 @@ dispatch('/actions/:code', 'actionsdetails');
 		$actionscript = ActionScriptController::GetActionScript($actioncode);
 		
 		
-	  	return render('actiondetail.html.php', layout(), layoutViewBag($actionscript->ActionName, $actionscript));
+	  	return render('actiondetail.html.php', layout(), layoutViewBag("", $actionscript));
 	}
 
 dispatch('/service/:name', 'service_infos');
