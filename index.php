@@ -70,7 +70,7 @@ dispatch('/actionscript/:code/:args', 'actionscript');
 	}
 	
 dispatch('/actions/:code', 'actionsdetails');
-	function actionscript()
+	function actionsdetails()
 	{		
 		$actioncode = params('code');
 		
