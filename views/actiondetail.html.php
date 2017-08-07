@@ -10,7 +10,7 @@ var actionDetails = new ActionScriptVM(<?php echo json_encode($Model) ?>);
 	<div class="center-align">
 		<h2><?php echo $Model->ActionName ?></h2>
 	  </div>
-    <div class="ico-btn circle ratio square fontchar-color-red" data-bind="click: RunAction()">
+    <div class="ico-btn disabled circle ratio square fontchar-color-red" data-bind="click: RunAction(), css: Waiting() ? 'disabled' : 'enabled'">
     
 
 	<div class="valign center-align" style="width: 100%;" data-init-size="240">
