@@ -12,13 +12,13 @@ var actionDetails = new ActionScriptVM(<?php echo json_encode($Model) ?>);
 	  </div>
     <div class="ico-btn disabled circle ratio square fontchar-color-red" data-bind="click: RunAction(), css: Waiting() ? 'disabled' : 'enabled'">
     
-
-	<div class="valign center-align" style="width: 100%;" data-init-size="240">
-	      <span data-bind="visible: !Waiting()">DO</span>
-              <span>
-                <i class="ico-btn material-icons" id="btnLoaded" data-bind="visible: Waiting(), css: Waiting() ? 'spinning' : '' ">loop</i>
-              </span>
-            </div>
+	
+	<div class="valign-wrapper" style="width: 100%;" data-init-size="240">
+	      <div data-bind="visible: !Waiting()" class="center-align" style="width: 100%">DO</div>
+              <div data-bind="visible: Waiting()" class="center-align" style="width: 100%">
+                <i class="ico-btn material-icons" id="btnLoaded" data-bind="css: Waiting() ? 'spinning' : '' ">loop</i>
+              </div>
+        </div>
 						    
     
     </div>
