@@ -14,6 +14,14 @@ class ActionScriptController
 			
 		$newProcess = new PiActionScript("Open Door", "action_opendoor.sh", "opd", "pi1");
 		array_push($actionsList, $newProcess);
+			
+		
+		$newProcess = new PiActionScript("Mount all disks", "action_mounta.sh", "mount", "null");
+		array_push($actionsList, $newProcess);
+		
+			
+		$newProcess = new PiActionScript("Restart Kodi", "action_restartkodi.sh", "kodi", "null");
+		array_push($actionsList, $newProcess);
 		
 		return $actionsList;
 	}
